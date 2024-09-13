@@ -120,11 +120,11 @@ df_fig_specs_2 <- df_fig_specs %>%
 if (ATAC) {
   df_sorted_bws <- df_fig_specs_2 %>% 
       mutate(name = ifelse(is.na(name_publication), expname, name_publication)) %>% 
-      select(name, bw, tss_coverage_1000)
+      dplyr::select(name, bw, tss_coverage_1000)
 } else {
   df_sorted_bws <- df_fig_specs_2 %>% 
     mutate(name = ifelse(is.na(name_publication), expname, name_publication)) %>% 
-    select(name, bw)
+    dplyr::select(name, bw)
 }
 
 # ---------------------------------------------------------------
@@ -155,9 +155,9 @@ zoom_bcl11a <- get_zoom(locus_bcl11a)
 zoom_myc <- get_zoom(locus_myc)
 
 if (ATAC) {
-  df_sorted_bws <- df_sorted_bws %>% select(1:3)
+  df_sorted_bws <- df_sorted_bws %>% dplyr::select(1:3)
 } else {
-  df_sorted_bws <- df_sorted_bws %>% select(1:2)
+  df_sorted_bws <- df_sorted_bws %>% dplyr::select(1:2)
 }
 
 

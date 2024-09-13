@@ -243,9 +243,6 @@ plotGlobinGenes <- function(genes, plotZoom, genename = TRUE,
     lcr_start <-c(5275366)
     lcr_end <- c(5291803)
     
-    # including HS5: chr11:5,275,822-5,291,803
-    
-    
     segments(lcr_start / Div, yPosGene, lcr_end / Div, yPosGene, col = colour)
     
     if (genename) {
@@ -267,6 +264,7 @@ custom_order <- function(x) {
   }
   
 }
+
 get_df_of_all_bws <- function(paths_bigwig,
     prefix = "VER9574_HbF_react_AF_CutnRun_Hudep-2_") {
   
@@ -295,81 +293,6 @@ get_df_of_all_bws <- function(paths_bigwig,
   
 }
 
-get_loci_data <- function() {
-  loci_data <- list(
-    list(locus_name = "gammaglobin", chr = "chr11", 
-         # start = 5210200, end = 5313900, 
-         start = 5200000, end = 5320000, 
-         genes_of_interest = c("HBB", "HBD", "HBG2", "HBG1", "HBE1")),
-    list(locus_name = "alphaglobin", chr = "chr16", start = 150000, end = 190000,
-         genes_of_interest = c("HBZ", "HBM", "HBA1", "HBA2")),
-    # chr2:60,363,406-60,645,549
-    list(locus_name = "bcl11a", chr = "chr2", start = 60363406, end = 60645549,
-         genes_of_interest = c("BCL11A"))
-  )
-  return (loci_data)  
-}
-
-# plot -----------------------------------------------------------------------
-make_plot <- function(locus_name, 
-                      df_sorted_bws,
-                      zoom,
-                      genes_of_interest,
-                      clone = "",
-                      seq = c("ATAC", "CR"),
-                      y_max = 10
-) {
-  
-  p_output <- paste0("output/", seq, "_max", y_max, "/")
-  f_name <- paste0(p_output, locus_name, "_", seq, "_coverage_", clone, ".pdf")
-  dir.create(p_output, showWarnings = FALSE)
-  
-  pdf(f_name, height=10, width=10)
-  
-  mat.row <- nrow(df_sorted_bws) + 1
-  
-  layout.matrix <- matrix(1:mat.row, nrow = mat.row, ncol = 1, byrow = TRUE)
-  layout(mat = layout.matrix
-         , height = c(rep(lcm(2), mat.row - 1), lcm(4))
-         , width = c(rep(lcm(20), mat.row))
-  )
-  
-  par(oma = c(0, 0, 4, 0))
-  par(mar=c(0, 8, 0, 2) +0.1)
-  
-  
-  for (i in 1:nrow(df_sorted_bws)) {
-    
-    name <- paste0( df_sorted_bws$name[i], " (", df_sorted_bws$mapq[i], ")") 
-    
-    
-    bw = df_sorted_bws$bw[i]
-    cov<-import(bw, which=zoom)
-
-    plot_bw(cov=cov, zoom=zoom, yMax=y_max, name = name)
-  }
-  
-  par(mar=c(6, 8, 0, 2) +0.1) 
-  plotGlobinGenes (genes=genes, plotZoom=zoom, 
-                   genes_of_interest = genes_of_interest,
-                   transcripts_of_interes = c(),
-                   xaxisUnit ="Mb", genename=TRUE, 
-                   colour='black', longestOnly=FALSE)
-  
-  if (locus_name == "hemaglobin") {
-    gRNA_114<-GRanges(seqnames='chr11', ranges=IRanges(start=5280665, end=5280684))
-    gRNA_503<-GRanges(seqnames='chr11', ranges=IRanges(start=5255265, end=5255284))
-    #115_HBG2	chr11	-	5249959	5249978	 CCTTGACCAATAGCCTTGAC
-    #115_HBG1	chr11	-	5254883	5254902	 CCTTGACCAATAGCCTTGAC
-    abline(v=start(gRNA_114)/1e6, lty=2, col='blue')
-    abline(v=start(gRNA_503)/1e6, lty=2, col='green')
-    abline(v=5249959/1e6, lty=2, col='red')
-    abline(v=5254883/1e6, lty=2, col='red')
-  }
-  
-  dev.off()
-  
-}
 
 get_zoom <- function(locus) {
   zoom <- GRanges(seqnames = locus$chr,
