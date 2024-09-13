@@ -12,9 +12,6 @@ fetal HBG globin genes"
 See also [README methods](doc/methods.md)
 
 
-See [average_bigwigs.sh](../scripts/average_bigwigs.sh)
-
-
 ### ATAC coverage coverage plots
 
 - Normalisation of bigwigs: --SPMR by MACS2 ("MACS will SAVE signal per million reads for fragment pileup profiles") 
@@ -37,12 +34,4 @@ See [average_bigwigs.sh](../scripts/average_bigwigs.sh)
 
 - bigwigs: ```~/Documents/projects/VER9574/CR/low_q_mapping/```
     - laat2 /storage/shared/HbF_react/Cut-and-Run/output_low_q_mapping_new/bigwig
-
-
-
-
-
-
-
-
 
