@@ -1,0 +1,16 @@
+expname	library	run_id	tissue_type	cell_line	diff_stage	library_rep	for_publication	name_publication	reseq_merge	biological_rep_merge	comment	keep_del
+VER9100_HbF_react_AF_ATAC_Hudep-2_WT1_D10	ATAC	VER9100	Hudep2	WT	Day10	1	Yes	WT_differentiated_rep1	3	2	NA	keep
+VER9308_HbF_react_AF_ATAC_Hudep-2_WT1_D10_	ATAC	VER9308	Hudep2	WT	Day10	1	Yes	WT_differentiated_rep1	3	2	NA	keep
+VER10253_HbF_react_AF_ATAC_HUDEP2_Wt2_D10_rep1	ATAC	VER10253	Hudep2	WT	Day10	1	Yes	WT_differentiated_rep2	NA	NA	NA	keep
+VER9842_HbF_react_AF_ATAC_Hudep-2_Gata1_G2_D10_rep1	ATAC	VER9842	Hudep2	Gata1_G2	Day10	1	Yes	Bcl11a_enhancer_differentiated_clone_2	7	4	NA	keep
+VER9842_HbF_react_AF_ATAC_Hudep-2_Gata1_A1_D10_rep1	ATAC	VER9842	Hudep2	Gata1_A1	Day10	1	Yes	Bcl11a_enhancer_differentiated_clone_1	8	4	NA	keep
+VER9842_HbF_react_AF_ATAC_Hudep-2_503_114_21_D10_rep1	ATAC	VER9842	Hudep2	500_114_21	Day10	1	Yes	500_114_deletion_differentiated_clone_2	11	6	NA	keep
+VER9308_HbF_react_AF_ATAC_Hudep-2_503_114_del_cl16_D10_	ATAC	VER9308	Hudep2	500_114_16	Day10	1	Yes	500_114_deletion_differentiated_clone_1	12	6	NA	keep
+VER9842_HbF_react_AF_ATAC_Hudep-2_115_F1_D10_rep1	ATAC	VER9842	Hudep2	115_F1	Day10	1	Yes	115_differentiated_clone_2	15	9	NA	keep
+VER9842_HbF_react_AF_ATAC_Hudep-2_115_H1_D10_rep1	ATAC	VER9842	Hudep2	115_H1	Day10	1	Yes	115_differentiated_clone_1	16	11	NA	keep
+VER9574_HbF_react_AF_CutnRun_Hudep-2_WT1_H3K4me3_D10	CutnRun	VER9574	Hudep-2	WT	Day10	2	Yes	WT_differentiated_rep1	NA	1	NA	keep
+VER9574_HbF_react_AF_CutnRun_Hudep-2_WT2_H3K4me3_D10	CutnRun	VER9574	Hudep-2	WT	Day10	2	Yes	WT_differentiated_rep2	NA	1	NA	keep
+VER9574_HbF_react_AF_CutnRun_Hudep-2_503_114_del_cl16_H3K4me3_D10	CutnRun	VER9574	Hudep-2	500_114_16	Day10	2	Yes	500_114_deletion_differentiated_clone_1	NA	2	NA	keep
+VER9574_HbF_react_AF_CutnRun_Hudep-2_503_114_del_cl21_H3K4me3_D10	CutnRun	VER9574	Hudep-2	500_114_21	Day10	2	Yes	500_114_deletion_differentiated_clone_2	NA	2	NA	keep
+VER9574_HbF_react_AF_CutnRun_Hudep-2_Gata1_clA1_H3K4me3_D10	CutnRun	VER9574	Hudep-2	Gata1_A1	Day10	1	Yes	Bcl11a_enhancer_differentiated_clone_1	NA	3	NA	keep
+VER9574_HbF_react_AF_CutnRun_Hudep-2_Gata1_clG2_H3K4me3_D10	CutnRun	VER9574	Hudep-2	Gata1_G2	Day10	1	Yes	Bcl11a_enhancer_differentiated_clone_2	NA	3	NA	keep
