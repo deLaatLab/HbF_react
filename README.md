@@ -2,10 +2,7 @@
 # ATAC and CR coverage 
 
 ATAC and C&R coverage plots for 
-"Enhancer distance matters: forced linear recruitment of a 
-super-enhancer strongly reactivates the developmentally silenced 
-fetal HBG globin genes"
-
+["Reactivation of developmentally silenced globin genes through forced linear recruitment of remote enhancers"](https://doi.org/10.1182/blood.2024028128)
 
 ## Figure ATAC and Cut&Run coverage
 
